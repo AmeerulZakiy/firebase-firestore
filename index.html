@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1>KPTM Student</h1>
+
+    <div class="content">
+
+        <form id="add-student-form">
+            <input type="text" name="name" placeholder="Name">
+            <input type="text" name="age" placeholder="Age">
+            <button type="submit">Add Student</button>
+        </form>
+
+        <ul id="student-list"></ul>
+        
+    </div>
+
+
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCSdYSa2R1Epjm7jWF-ylCydxcYpdwQu0k",
+            authDomain: "ninja-firebase-tut-12db9.firebaseapp.com",
+            databaseURL: "https://ninja-firebase-tut-12db9.firebaseio.com",
+            projectId: "ninja-firebase-tut-12db9",
+            storageBucket: "ninja-firebase-tut-12db9.appspot.com",
+            messagingSenderId: "735032616518",
+            appId: "1:735032616518:web:9e762dd05e283db6ed8c47",
+            measurementId: "G-DB5JXGT6HW"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db = firebase.firestore();
+    </script>
+
+    <script src="data.js"></script>
+</body>
+
+</html>
